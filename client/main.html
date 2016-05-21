@@ -1,0 +1,18 @@
+<head>
+  <title>simple</title>
+</head>
+
+<body>
+  {{> test}}
+</body>
+
+<template name="test">
+    <h1>Testing custom EJSON insert in MongoDB</h1>
+    <button id="insertButton">Run Meteor method call</button>
+
+    <ul>
+        {{#each mongoContent}}
+            <li>{{getStringValueOf this}}</li>
+        {{/each}}
+    </ul>
+</template>
